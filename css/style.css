@@ -1,17 +1,17 @@
 @font-face {
-  font-family: 'BrutalRegular';
+  font-family: 'Brutal Type';
   src: url('../fonts/BrutalRegular.woff') format('woff');
   font-weight: normal;
 }
 
 @font-face {
-  font-family: 'BrutalBold';
+  font-family: 'Brutal Type';
   src: url('../fonts/BrutalBold.woff') format('woff');
   font-weight: bold;
 }
 
 @font-face {
-  font-family: 'BrutalMedium';
+  font-family: 'Brutal Type';
   src: url('../fonts/BrutalMedium.woff') format('woff');
   font-weight: medium;
 }
@@ -44,7 +44,9 @@ dd {
 body {
   min-height: 100vh;
   line-height: 1.2;
+  background-color: #E5E5E5;
 }
+
 
 ul[class],
 ol[class] {
@@ -76,7 +78,10 @@ button {
   width: 100%;
   max-width: 1200px;
   margin: auto;
+  background-color: #FFFFFF;
 }
+
+
 
 .button {
   background: none;
@@ -100,7 +105,7 @@ button {
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   .header {
     height: 48px;
     justify-content: flex-start;
@@ -124,7 +129,7 @@ button {
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   .header__button-hamburger {
     position: initial;
     margin-left: 16px;
@@ -157,7 +162,7 @@ button {
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   .header__content {
     margin: 0;
     margin-left: 16px;
@@ -169,7 +174,7 @@ button {
   height: 80px;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   .header__logo {
     content: url(../img/svg/H_mobile.svg);
     padding: 8px 10px 8px 10px;
@@ -182,7 +187,7 @@ button {
 
 .header__text {
   font-family: "PT Sans Caption", sans-serif;
-  color: white;
+  color: #FFFFFF;
   font-size: 14px;
   line-height: 22px;
   font-weight: normal;
@@ -225,7 +230,7 @@ button {
   justify-content: space-between;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   .header__buttons {
     top: 17px;
   }
@@ -239,7 +244,7 @@ button {
   background: url(../img/svg/whiteFind.svg);
 }
 
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   .header__button-find {
     opacity: 1;
     visibility: visible;
@@ -253,9 +258,10 @@ button {
   font-size: 15px;
   line-height: 10px;
   font-weight: 700px;
+  style: normal;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   .header_button-enter {
     position: initial;
   }
@@ -322,7 +328,7 @@ button {
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   .nav__panel {
     margin-left: 14px;
     margin-right: 14px;
@@ -360,14 +366,11 @@ button {
   color: black;
   font-size: 16px;
   line-height: 22px;
-  font-family: "PT Sans Caption", sans-serif;
-  color: black;
-  font-size: 14px;
-  line-height: 22px;
   letter-spacing: -0.02em;
+  font-feature-settings: 'tnum' on, 'lnum' on;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   .panel__elem {
     width: auto;
   }
@@ -995,7 +998,7 @@ button {
   }
 }
 
-.times__elem_active {
+.times__elem:hover {
   border-bottom: 2px solid #f7ab32;
 }
 
@@ -1192,7 +1195,7 @@ button {
   width: 1px;
   height: 370px;
   top: -5px;
-  left: 5px;
+  left: 4.5px;
   z-index: 0;
   background: linear-gradient(180deg, white, 10px, black, 310px, white);
 }
@@ -1203,21 +1206,23 @@ button {
   font-size: 15px;
   line-height: 21px;
   padding-left: 25px;
-  background: top 6px left no-repeat url(../img/svg/Point.svg);
+  background: top 5px left no-repeat url(../img/svg/Point.svg);
   z-index: 1;
   text-decoration: none;
   color: black;
 }
 
-@media (max-width: 868px) {
+@media (max-width: 768px) {
   .text-list__elem {
-    font-size: 13px;
+    font-size: 15px;
+    line-height: 21px;
   }
 }
 
-@media (max-width: 804px) {
+@media (max-width: 320px) {
   .text-list__elem {
-    font-size: 11px;
+    font-size: 15px;
+    line-height: 21px;
   }
 }
 
@@ -1275,7 +1280,7 @@ button {
 }
 
 .aside__type {
-  font-family: "Brural Type", sans-serif;
+  font-family: "BruralRegular", sans-serif;
   color: white;
   font-size: 14px;
   line-height: 18px;
@@ -1286,6 +1291,7 @@ button {
   background-color: #333333;
   text-align: center;
   padding: 4px;
+align-items: center;
 }
 
 .aside__button-open {
@@ -1320,11 +1326,12 @@ button {
   text-decoration: none;
 }
 
+
 .aside__container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   padding: 20px 17px 20px 21px;
 }
 
@@ -1388,6 +1395,10 @@ button {
   z-index: 1;
   padding-left: 15px;
   background: top 5px left no-repeat url(../img/svg/Point.svg);
+}
+
+.aside-series__elem:hover {
+  background: top 5px left no-repeat url(../img/svg/Point2.svg);
 }
 
 @media (max-width: 320px) {
@@ -1477,6 +1488,7 @@ button {
   color: #516e77;
   font-size: 14px;
   line-height: 24px;
+
 }
 
 .NADIS__text {
@@ -1537,6 +1549,7 @@ button {
 
 .text-list__elem:hover {
   color: #faaf3f;
+  background: top 5px left no-repeat url(../img/svg/Point2.svg);
 }
 
 .aside__all:hover {
@@ -1545,4 +1558,13 @@ button {
 
 .yellow-button:hover {
   background-color: #f49f21;
+}
+
+.NADIS__text:hover {
+  color: #faaf3f;
+}
+
+.test__article:hover .corner {
+  visibility: visible;
+  opacity: 1;
 }
